@@ -1,0 +1,116 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+:root {
+  --height: 88%;
+  --width: 320px;
+}
+body {
+  /* background: rgb(10, 132, 144); */
+  background: linear-gradient(
+    90deg,
+    rgba(10, 132, 144, 1) 0%,
+    rgba(45, 13, 135, 1) 100%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  width: var(--width);
+  height: var(--height);
+  background-color: black;
+
+  display: grid;
+  grid-template-rows: 20% 20% 60%;
+}
+.btns-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+.btn {
+  color: black;
+  background-color: white;
+  /* border: 1px solid black; */
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 19px;
+  cursor: pointer;
+}
+.btn-num-0 {
+  grid-column: span 2;
+}
+
+.btn-function,
+.btn-operator,
+.btn-equal {
+  color: #1a4d2e;
+}
+
+.btn-num:hover,
+.btn-function:hover,
+.btn-operator:hover,
+.btn-equal:hover {
+  background-color: rgb(204, 204, 204);
+}
+.btn-num:active,
+.btn-function:active,
+.btn-operator:active,
+.btn-equal:active {
+  background-color: rgb(58, 57, 57);
+}
+
+/* .btn-equal {
+  background-color: #1a4d2e;
+}
+.btn-function-ac {
+  background-color: #ee4e4e;
+}
+.btn-function-ac:hover {
+  background-color: #d86060;
+}
+.btn-function-ac:active {
+  background-color: #f53b3b;
+}
+
+.btn-function-back {
+  background-color: #75a47f;
+}
+
+.btn-operator {
+  background-color: #e65c19;
+} */
+
+.expression-display,
+.result-display {
+  color: white;
+  text-align: end;
+  font-size: 2rem;
+}
+/* .expression-display .expression-display-value {
+  height: 100%;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: inherit;
+} */
+.expression-display {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: black black;
+  margin-top: 40px;
+}
+.expression-display:hover {
+  scrollbar-color: rgb(92, 92, 92) black;
+  transition: all 0.5s;
+}
+.result-display {
+  color: white;
+  font-size: 4rem;
+  margin-top: 20px;
+}

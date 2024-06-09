@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Horizontal Scrollbar Example</title>
+    <style>
+      .scrollable-container {
+        width: 300px; /* Set the desired width of the container */
+        white-space: nowrap; /* Prevents text from wrapping to the next line */
+        overflow-x: auto; /* Adds a horizontal scrollbar when needed */
+        border: 1px solid #ccc; /* Optional: adds a border for visibility */
+        padding: 10px; /* Optional: adds some padding */
+      }
+
+      /* Customizing the scrollbar for WebKit browsers */
+      .scrollable-container::-webkit-scrollbar {
+        height: 12px; /* Height of the horizontal scrollbar */
+      }
+
+      .scrollable-container::-webkit-scrollbar-track {
+        background: #ff3131; /* Background of the track */
+      }
+
+      .scrollable-container::-webkit-scrollbar-thumb {
+        background: #f53636; /* Color of the scrollbar thumb */
+        border-radius: 10px; /* Rounded corners */
+      }
+
+      .scrollable-container::scrollbar-thumb:hover {
+        background: #f31e1e; /* Color when hovered */
+      }
+
+      /* Customizing the scrollbar for Firefox */
+      .scrollable-container {
+        scrollbar-width: thin; /* Thin scrollbar */
+        scrollbar-color: #f34444 #030303; /* Thumb color and track color */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scrollable-container">
+      This is a long text that will overflow and create a horizontal scrollbar.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean commodo
+      ligula eget dolor. Aenean massa.
+    </div>
+  </body>
+</html>
