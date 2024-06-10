@@ -51,6 +51,9 @@ body {
 .btn-equal {
   color: #1a4d2e;
 }
+.btn-function-ac {
+  color: #a91d3a;
+}
 
 .btn-num:hover,
 .btn-function:hover,
