@@ -15,7 +15,6 @@ let hasDecimalPoint = true;
 // adds en addEventListener to each button
 btns.forEach((btn) => {
   btn.addEventListener("click", (e) => {
-    console.log(e.target);
     if (e.target.classList.contains("btn-num")) {
       if (e.target.textContent === "0") {
         setExpressionDisplayArr("0");
@@ -88,9 +87,7 @@ btns.forEach((btn) => {
       } catch (error) {
         console.log("error is: " + error);
       }
-      // let result = eval(expressionDisplayArr.join(""));
-      // expressionDisplayArr = [];
-      // setExpressionDisplayArr(result);
+
       expressionDisplay.textContent = "";
     } else if (e.target.textContent === "←") {
       if (expressionDisplayArr.length > 1) {
@@ -122,15 +119,8 @@ function setExpressionDisplayArr(value) {
   let expressionStr = expressionDisplayArr.join("");
   setResultDisplay(expressionStr);
 }
-// function setExpressionDisplayArr(resultDisplayValue, value) {
-//   expressionDisplayArr.push(resultDisplayValue);
-//   expressionDisplayArr.push(value);
-//   expressionDisplay.textContent = expressionDisplayArr.join(" ");
-//   resultDisplayArr = [];
-// }
 
 function setResultDisplay(value) {
-  console.log(value);
   if (
     value.includes("+") ||
     value.includes("-") ||
@@ -143,14 +133,12 @@ function setResultDisplay(value) {
       value.charAt(value.length - 1) != "*" &&
       value.charAt(value.length - 1) != "/"
     ) {
-      // console.log(eval(value));
       try {
         let sum = eval(value);
         resultDisplay.textContent = sum;
       } catch (error) {
         console.log("error is: " + error);
       }
-      // resultDisplay.textContent = eval(value);
     }
   }
 }

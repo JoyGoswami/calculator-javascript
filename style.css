@@ -102,13 +102,15 @@ body {
   outline: none;
   background-color: inherit;
 } */
-.expression-display {
+.expression-display,
+.result-display {
   overflow-x: auto;
   scrollbar-width: thin;
   scrollbar-color: black black;
   margin-top: 40px;
 }
-.expression-display:hover {
+.expression-display:hover,
+.result-display:hover {
   scrollbar-color: rgb(92, 92, 92) black;
   transition: all 0.5s;
 }
